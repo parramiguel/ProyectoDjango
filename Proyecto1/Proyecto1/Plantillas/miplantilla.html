@@ -1,0 +1,27 @@
+<html>
+  <body>
+
+      {% include "superior/barra.html" %}
+    <h2 style="color:blue">
+    Hola esta es nuestra primera plantilla en el proyecto Django
+    </h2>
+    <p>El nombre del usuario es:{{nombre_persona.upper}} {{apellido_persona.upper}}</p>
+    <p>Estamos viendo el tema de las plantilla al día: {{En_estos_momento_es.day}}/{{En_estos_momento_es.month}}/{{En_estos_momento_es.year}}</p>
+    <p><strong>Temas del curso</strong></p>
+    <p>
+      <ul>
+      {% if Temas %}
+          {% for elTema in Temas %}
+
+              <li>{{elTema}}</li>
+
+          {% endfor %}
+      
+      {% else %}
+        <p>No hay elementos a mostrar</p>
+      {% endif %}
+      </ul>
+
+    </p>
+  </body>
+</html>
